@@ -1,0 +1,24 @@
+Value ERSPAN_SOURCE ((?i)(true|false))
+Value RX_SESSIONS_NUM (\d+)
+Value TX_SESSIONS_NUM (\d+)
+Value ERSPAN_HEADER_TYPE (\S+)
+Value ACL ((?i)(true|false))
+Value FRAGMENTATION ((?i)(true|false))
+Value TRUNCATION ((?i)(true|false))
+Value SEQUENCE_NUM ((?i)(true|false))
+Value QOS ((?i)(true|false))
+
+Start
+  ^(ERSPAN Source Session:)?ERSPAN Source Session Supported: ${ERSPAN_SOURCE}
+  ^No of Rx ERSPAN source session: ${RX_SESSIONS_NUM}
+  ^No of Tx ERSPAN source session: ${TX_SESSIONS_NUM}
+  ^ERSPAN Header Type supported: ${ERSPAN_HEADER_TYPE}
+  ^ACL filter Supported: ${ACL}
+  ^Fragmentation Supported: ${FRAGMENTATION}
+  ^Truncation Supported: ${TRUNCATION}
+  ^Sequence number Supported: ${SEQUENCE_NUM}
+  ^QOS Supported: ${QOS}
+  ^\s*\^\s*
+  ^.*Invalid input detected -> EOF
+  ^\s*$$
+  ^.*$$ -> Error

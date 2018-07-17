@@ -1,0 +1,12 @@
+---
+parsed_sample:
+
+- erspan_source: 'true'
+  rx_sessions_num: '8'
+  tx_sessions_num: '8'
+  erspan_header_type: 'II'
+  acl: 'true'
+  fragmentation: 'false'
+  truncation: 'false'
+  sequence_num: 'false'
+  qos: 'true'
