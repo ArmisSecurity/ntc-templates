@@ -4,7 +4,7 @@ Value MGMT_IP (.*)
 Value PLATFORM (.*)
 Value REMOTE_PORT (.*)
 Value LOCAL_PORT (.*)
-Value VERSION (.*)
+Value List VERSION (.*)
 Value INTERFACE_IP (.*)
 Value CAPABILITIES (.*)
 
@@ -25,5 +25,9 @@ GetInterfaceIP
   ^.*IP.+Address: ${INTERFACE_IP} -> Start
 
 GetVersion
-  ^${VERSION} -> Start
+  ^\s*$$ -> AlertBadVersion
+  ^${VERSION} -> GetVersion
 
+AlertBadVersion
+  ^Advertisement\s+Version -> Start
+  ^.* -> Error
