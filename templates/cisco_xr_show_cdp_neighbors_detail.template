@@ -4,7 +4,7 @@ Value MGMT_IP (.*)
 Value PLATFORM (.*)
 Value REMOTE_PORT (.*)
 Value LOCAL_PORT (.*)
-Value VERSION (.*)
+Value List VERSION (.*)
 Value CAPABILITIES (.*)
 
 Start
@@ -20,5 +20,9 @@ GetIP
   ^.*IP.+address: ${MGMT_IP} -> Start
 
 GetVersion
-  ^${VERSION} -> Record Start
+  ^\s*$$ -> AlertBadVersion
+  ^${VERSION} -> GetVersion
 
+AlertBadVersion
+  ^[Aa]dvertisement\s+[Vv]ersion -> Record Start
+  ^.* -> Error
