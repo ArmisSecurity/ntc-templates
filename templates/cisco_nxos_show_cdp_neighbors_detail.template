@@ -30,4 +30,5 @@ GetVersion
 
 AlertBadVersion
   ^Advertisement\s+Version -> Start
+  ^\s*
   ^.* -> Error

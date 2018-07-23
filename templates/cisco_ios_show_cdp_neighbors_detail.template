@@ -23,5 +23,6 @@ GetVersion
   ^${SOFTWARE_VERSION} -> GetVersion
 
 AlertBadVersion
-  ^advertisement\s+version -> Record Start
+  ^[Aa]dvertisement\s+[Vv]ersion -> Record Start
+  ^\s*
   ^.* -> Error

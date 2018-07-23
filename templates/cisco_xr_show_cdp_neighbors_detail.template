@@ -25,4 +25,5 @@ GetVersion
 
 AlertBadVersion
   ^[Aa]dvertisement\s+[Vv]ersion -> Record Start
+  ^\s*
   ^.* -> Error
