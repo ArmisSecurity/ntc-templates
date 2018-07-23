@@ -38,7 +38,7 @@ parsed_sample:
   neighbor_port_id: 'g2'
   neighbor_interface: ''
   neighbor: ''
-  system_description: ''
+  system_description: []
   capabilities: ''
   management_ip: ''
   vlan: ''
