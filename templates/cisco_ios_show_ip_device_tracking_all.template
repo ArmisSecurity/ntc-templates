@@ -17,4 +17,5 @@ Start
   ^\s*\^\s*$$
   ^.*Invalid input detected.*
   ^\s*$$
+  ^\s*IP Device Tracking = Disabled -> EOF
   ^.* -> Error

@@ -60,4 +60,6 @@ Med
   ^\s*$$
   ^\s*-+\s*$$ -> Continue.Record
   ^\s*-+\s*$$ -> Start
+  ^\s*[Tt]otal entries -> Continue.Record
+  ^\s*[Tt]otal entries -> Start
   ^.* -> Error
