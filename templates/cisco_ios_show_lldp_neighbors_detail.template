@@ -44,6 +44,7 @@ Start
   ^\s*\^\s*
   ^\s*Total\s+entries\s+displayed -> Record
   ^\s*$$
+  ^\s*
   ^.*$$ -> Error
 
 GetDescription
