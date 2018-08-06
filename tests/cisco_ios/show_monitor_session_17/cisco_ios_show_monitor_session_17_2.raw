@@ -1,0 +1,11 @@
+Session 7
+---------
+Type                     : ERSPAN Source Session
+Status                   : Admin Disabled
+Source Ports             : 
+    Both                 : Gi1/0/2
+MAC Access-group         : MAC
+Destination IP Address   : 192.168.1.97
+Destination ERSPAN ID    : 11
+Origin IP Address        : 192.168.1.9
+IP TTL                   : 2
