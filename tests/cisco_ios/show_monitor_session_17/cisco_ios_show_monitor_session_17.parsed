@@ -1,0 +1,12 @@
+---
+parsed_sample:
+
+- session: '17'
+  type:  'ERSPAN Source Session'
+  status: 'Admin Enabled'
+  vlan:  '1'
+  direction:  'Both' 
+  destination_ip:  '192.168.1.71'
+  origin_ip:  '192.168.1.9'
+  erspan_id:  '17'
+  port:  ''

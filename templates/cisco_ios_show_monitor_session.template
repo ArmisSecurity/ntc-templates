@@ -1,0 +1,26 @@
+Value SESSION (\d+)
+Value VLAN (\d+)
+Value TYPE ([\S\s]+)
+Value STATUS ([\S\s]+)
+Value DIRECTION (\S+)
+Value PORT (\S+)
+Value DESTINATION_IP (\S+)
+Value ORIGIN_IP (\S+)
+Value ERSPAN_ID (\d+)
+
+Start
+  ^Session\s${SESSION}
+  ^\-+
+  ^Type\s+:\s+${TYPE}
+  ^Status\s+:\s+${STATUS}
+  ^Source\sVLANs\s+: -> Vlans
+  ^Source\sPorts\s+: -> Ports
+  ^Destination\sIP\sAddress\s+:\s+${DESTINATION_IP}
+  ^Destination\sERSPAN\sID\s+:\s+${ERSPAN_ID}
+  ^Origin\sIP\sAddress\s+:\s+${ORIGIN_IP}
+
+Vlans
+  ^\s+${DIRECTION}\s+:\s+${VLAN} -> Start
+
+Ports
+  ^\s+${DIRECTION}\s+:\s+${PORT} -> Start

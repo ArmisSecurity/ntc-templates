@@ -1,0 +1,9 @@
+Session 17
+----------
+Type                     : ERSPAN Source Session
+Status                   : Admin Enabled
+Source VLANs             :
+    Both                 : 1
+Destination IP Address   : 192.168.1.71
+Destination ERSPAN ID    : 17
+Origin IP Address        : 192.168.1.9
