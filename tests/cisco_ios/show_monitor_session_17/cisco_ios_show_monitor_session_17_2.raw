@@ -2,6 +2,7 @@ Session 7
 ---------
 Type                     : ERSPAN Source Session
 Status                   : Admin Disabled
+Description              : test erspan session
 Source Ports             : 
     Both                 : Gi1/0/2
 MAC Access-group         : MAC
