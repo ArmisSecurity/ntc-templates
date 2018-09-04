@@ -1,0 +1,10 @@
+   session 48
+---------------
+type              : erspan-source
+state             : up
+erspan-id         : 902
+acl-name          : acl-name not specified
+destination-ip    : 10.11.11.3
+origin-ip         : 10.254.254.21 (global)
+source intf       :
+    both          : Eth2/10
