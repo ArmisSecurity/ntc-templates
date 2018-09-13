@@ -1,0 +1,13 @@
+---
+parsed_sample:
+
+- session: '48'
+  type:  'erspan-source'
+  status: 'up'
+  vlan:  ''
+  direction:  'both' 
+  destination_ip:  '10.11.11.3'
+  origin_ip:  '10.254.254.21'
+  erspan_id:  '902'
+  port:  'Eth2/10'
+  description: ''
