@@ -55,6 +55,7 @@ avaya_ers_show_mac-address-table.template, .*, avaya_ers, sh[[ow]] mac-a[[ddress
 avaya_ers_show_interface_name.template, .*, avaya_ers, sh[[ow]] in[[terfaces]] n[[ames]]
 avaya_ers_show_sys-info.template, .*, avaya_ers, sh[[ow]] sys-[[info]]
 avaya_ers_show_vlan.template, .*, avaya_ers, sh[[ow]] vlan
+avaya_ers_show_mlt.template, .*, avaya_ers, sh[[ow]] ml[[t]]
 
 avaya_vsp_show_software.template, .*, avaya_vsp, sho[[w]] so[[ftware]]
 
@@ -101,8 +102,11 @@ cisco_asa_show_running-config_ipsec.template, .*, cisco_asa, sh[[ow]] ru[[nning-
 cisco_asa_show_crypto_ipsec_sa.template, .*, cisco_asa, sh[[ow]] cry[[pto]] ip[[sec]] sa
 cisco_asa_show_access-list.template, .*, cisco_asa, sh[[ow]] ac[[cess-list]]
 cisco_asa_show_interface.template, .*, cisco_asa, sh[[ow]] int[[erface]]
+cisco_asa_show_inventory.template, .*, cisco_asa, sh[[ow]] inven[[tory]]
+cisco_asa_show_failover.template, .*, cisco_asa, sh[[ow]] fa[[ilover]]
 cisco_asa_show_version.template, .*, cisco_asa, sh[[ow]] ver[[sion]]
 cisco_asa_show_route.template, .*, cisco_asa, sh[[ow]] ro[[ute]]
+cisco_asa_show_xlate.template, .*, cisco_asa, sh[[ow]] x[[late]]
 cisco_asa_show_name.template, .*, cisco_asa, sh[[ow]] nam[[e]]
 cisco_asa_dir.template, .*, cisco_asa, dir
 
@@ -118,6 +122,7 @@ cisco_ios_show_interface_transceiver.template, .*, cisco_ios, sh[[ow]] int[[erfa
 cisco_ios_show_lldp_neighbors_detail.template, .*, cisco_ios, sh[[ow]] lld[[p]] neig[[hbors]] det[[ail]]
 cisco_ios_show_cdp_neighbors_detail.template, .*, cisco_ios, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_ios_show_interfaces_status.template, .*, cisco_ios, sh[[ow]] int[[erfaces]] st[[atus]]
+cisco_ios_show_ip_eigrp_topology.template, .*, cisco_ios, sh[[ow]] ip eigrp top[[ology]]
 cisco_ios_show_ip_source_binding.template, .*, cisco_ios, sh[[ow]] ip sou[[rce]] b[[inding]]
 cisco_ios_show_mac-address-table.template, .*, cisco_ios, sh[[ow]] (mac-[[address-table]]|mac ad[[dress-table]])
 cisco_ios_show_ip_ospf_database.template, .*, cisco_ios, sh[[ow]] ip ospf data[[base]]
@@ -126,6 +131,7 @@ cisco_ios_show_ip_access-lists.template, .*, cisco_ios, sh[[ow]] ip acce[[ss-lis
 cisco_ios_show_monitor_session.template, .*, cisco_ios, sh[[ow]] mon[[itor]] s[[ession]] (\d+)
 cisco_ios_show_power_available.template,  .*, cisco_ios, sh[[ow]] pow[[er]] a[[vailable]]
 cisco_ios_show_ip_bgp_summary.template, .*, cisco_ios, sh[[ow]] ip bgp sum[[mary]]
+cisco_ios_show_ip_prefix-list.template, .*, cisco_ios, sh[[ow]] ip pre[[fix-list]]
 cisco_ios_show_ipv6_int_brief.template, .*, cisco_ios, sh[[ow]] ipv[[6]] i[[nterface]] b[[rief]]
 cisco_ios_show_isis_neighbors.template, .*, cisco_ios, sh[[ow]] isis ne[[ighbors]]
 cisco_ios_show_lldp_neighbors.template, .*, cisco_ios, sh[[ow]] lld[[p]] neig[[hbors]]
@@ -142,8 +148,11 @@ cisco_ios_show_power_status.template,  .*, cisco_ios, sh[[ow]] pow[[er]] st[[atu
 cisco_ios_show_access-list.template, .*, cisco_ios, sh[[ow]] acc[[ess-list]]
 cisco_ios_show_isdn_status.template, .*, cisco_ios, sh[[ow]] isd[[n]] st[[atus]]
 cisco_ios_show_interfaces.template, .*, cisco_ios, sh[[ow]] int[[erfaces]]
+cisco_ios_show_redundancy.template, .*, cisco_ios, sh[[ow]] redu[[ndancy]]
 cisco_ios_show_vtp_status.template, .*, cisco_ios, sh[[ow]] vtp stat[[us]]
 cisco_ios_show_inventory.template, .*, cisco_ios, sh[[ow]] inven[[tory]]
+cisco_ios_show_ip_mroute.template, .*, cisco_ios, sh[[ow]] ip mr[[oute]]
+cisco_ios_show_route-map.template, .*, cisco_ios, sh[[ow]] route-m[[ap]]
 cisco_ios_show_ip_route.template, .*, cisco_ios, sh[[ow]] ip r[[oute]]
 cisco_ios_show_aliases.template,  .*, cisco_ios, sh[[ow]] alia[[ses]]
 cisco_ios_show_archive.template,  .*, cisco_ios, sh[[ow]] arc[[hive]]
@@ -167,6 +176,7 @@ cisco_nxos_show_ipv6_interface_brief.template, .*, cisco_nxos, sh[[ow]] ipv[[6]]
 cisco_nxos_show_port-channel_summary.template, .*, cisco_nxos, sh[[ow]] po[[rt-channel]] sum[[mary]]
 cisco_nxos_show_cts_interface_brief.template, .*, cisco_nxos, sh[[ow]] cts inte[[rface]] br[[ief]]
 cisco_nxos_show_cts_interface_all.template, .*, cisco_nxos, sh[[ow]] ct[[s]] inter[[face]] al[[l]]
+cisco_nxos_show_ip_community-list.template, .*, cisco_nxos, sh[[ow]] ip comm[[unity-list]]
 cisco_nxos_show_mac_address-table.template, .*, cisco_nxos, sh[[ow]] mac addr[[ess-table]]
 cisco_nxos_show_interface_status.template, .*, cisco_nxos, sh[[ow]] int[[erface]] st[[atus]]
 cisco_nxos_show_ip_bgp_neighbors.template, .*, cisco_nxos, sh[[ow]] ip bgp nei[[ghbors]]
@@ -198,14 +208,17 @@ cisco_nxos_show_vpc.template, .*, cisco_nxos, sh[[ow]] vpc
 cisco_nxos_show_vrf.template, .*, cisco_nxos, sh[[ow]] vrf
 
 cisco_wlc_ssh_show_cdp_neighbors_detail.template, .*, cisco_wlc_ssh, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
+cisco_wlc_ssh_show_ap_config_general.template, .*, cisco_wlc_ssh, sh[[ow]] ap con[[fig]] ge[[neral]]
 cisco_wlc_ssh_show_sysinfo.template, .*, cisco_wlc_ssh, sh[[ow]] sysi[[nfo]]
 
+cisco_xr_show_controllers_HundredGigabitEthernet.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] Hu[[ndredGigabitEthernet]]
 cisco_xr_show_bgp_vrf_all_ipv4_unicast_summary.template, .*, cisco_xr, sh[[ow]] bg[[p]] v[[rf]] all ip[[v4]] uni[[cast]] summ[[ary]]
 cisco_xr_admin_show_controller_fabric_health.template, .*, cisco_xr, adm[[in]] sh[[ow]] controller fab[[ric]] hea[[lth]]
 cisco_xr_show_controller_fabric_plane_all.template, .*, cisco_xr, sh[[ow]] controller fab[[ric]] pla[[ne]] all
 cisco_xr_show_configuration_commit_list.template, .*, cisco_xr, sh[[ow]] conf[[iguration]] c[[ommit]] l[[ist]]
 cisco_xr_show_dhcp_ipv4_proxy_binding.template, .*, cisco_xr, sh[[ow]] dh[[cp]] ipv4 p[[roxy]] b[[inding]]
 cisco_xr_show_mpls_ldp_neighbor_brief.template, .*, cisco_xr, sh[[ow]] mp[[ls]] ld[[p]] neigh[[bor]] br[[ief]]
+cisco_xr_admin_show_environment_fan.template, .*, cisco_xr, adm[[in]] sh[[ow]] env[[ironment]] f[[an]]
 cisco_xr_show_cdp_neighbors_detail.template, .*, cisco_xr, sh[[ow]] c[[dp]] neig[[hbors]] det[[ail]]
 cisco_xr_show_redundancy_summary.template, .*, cisco_xr, sh[[ow]] redun[[dancy]] summ[[ary]]
 cisco_xr_show_interface_brief.template, .*, cisco_xr, sh[[ow]] int[[erface]] br[[ief]]
@@ -220,7 +233,9 @@ cisco_xr_show_bfd_sessions.template, .*, cisco_xr, sh[[ow]] bf[[d]] sess[[ions]]
 cisco_xr_show_pim_neighbor.template, .*, cisco_xr, sh[[ow]] pi[[m]] neigh[[bor]]
 cisco_xr_show_controllers.template, .*, cisco_xr, sh[[ow]] contr[[ollers]] (\S+) phy
 cisco_xr_show_interfaces.template, .*, cisco_xr, sh[[ow]] inte[[rfaces]]
+cisco_xr_admin_show_vm.template, .*, cisco_xr, adm[[in]] sh[[ow]] vm
 cisco_xr_show_ip_route.template, .*, cisco_xr, sh[[ow]] ip ro[[ute]]
+cisco_xr_show_version.template, .*, cisco_xr, sh[[ow]] ver[[sion]]
 
 dell_force10_show_vlan_brief.template, .*, dell_force10, sh[[ow]] vl[[an]] br[[ief]]
 dell_force10_show_version.template, .*, dell_force10, sh[[ow]] ver[[sion]]
@@ -253,5 +268,11 @@ paloalto_panos_show_counter_global.template, .*, paloalto_panos, sh[[ow]] coun[[
 paloalto_panos_show_system_info.template, .*, paloalto_panos, sh[[ow]] sys[[tem]] in[[fo]]
 paloalto_panos_show_jobs_all.template, .*, paloalto_panos, sh[[ow]] jo[[bs]] all
 
+ubiquiti_edgeswitch_show_vlan.template, .*, ubiquiti_edgeswitch, sh[[ow]] vl[[an]]
+ubiquiti_edgeswitch_show_arp.template, .*, ubiquiti_edgeswitch, sh[[ow]] ar[[p]]
+
 vmware_nsxv_show_ip_bgp_neighbors.template, .*, vmware_nsxv, sh[[ow]] ip b[[gp]] n[[eighbors]]
 vmware_nsxv_show_ip_route.template, .*, vmware_nsxv, sh[[ow]] ip r[[oute]]
+
+vyatta_vyos_show_interfaces.template, .*, .*vyos.*, sh[[ow]] int[[erfaces]]
+vyatta_vyos_show_arp.template, .*, .*vyos.*, sh[[ow]] a[[rp]]
