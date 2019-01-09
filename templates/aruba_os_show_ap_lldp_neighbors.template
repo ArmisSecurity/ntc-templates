@@ -1,0 +1,14 @@
+Value AP (\S+)
+Value INTERFACE (\S+)
+Value NEIGHBOR (\d+)
+Value CHASSIS_ID (\S+)
+Value PORT (\S+)
+Value MANAGEMENT_ADDRESS (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
+Value CAPABILITIES (\S+)
+
+Start
+  ^--  -> LLDP
+
+LLDP
+  ^${AP}\s+${INTERFACE}\s+${NEIGHBOR}\s+${CHASSIS_ID}\s+${PORT}\s+${MANAGEMENT_ADDRESS}\s+${CAPABILITIES} -> Record
+  ^Capability

@@ -1,0 +1,10 @@
+(Aruba7010) #show ap lldp  neighbors
+
+AP LLDP Neighbors (Updated every 60 seconds)
+--------------------------------------------
+AP                 Interface  Neighbor  Chassis Name/ID     Port Name/ID           Mgmt. Address  Capabilities
+--                 ---------  --------  ---------------     ------------           -------------  ------------
+11:11:11:11:11:11  eth0       0         random-switch.bla  GigabitEthernet1/0/9   192.168.1.6    BR
+22:22:22:22:22:22  eth0       0         random-switch.foo  GigabitEthernet1/0/21  192.168.1.4    B
+
+Capability codes: (R)Router, (B)Bridge, (A)Access Point, (P)Phone, (O)Other
