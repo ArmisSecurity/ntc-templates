@@ -1,0 +1,10 @@
+(aruba-master) #show lldp neighbor
+
+Capability codes: (R)Router, (B)Bridge, (A)Access Point, (P)Phone, (S)Station
+                  (r)Repeater, (O)Other
+LLDP Neighbor Information
+-------------------------
+Local Intf  Chassis ID         Capability  Remote Intf       Expiry (Secs)  System Name
+----------  ----------         ----------  -----------       -------------  -----------
+GE1/0       ec:3e:f7:67:6a:40  B:R         Aruba-Controller  94             31switch1
+GE1/1       ec:3e:f7:67:6a:40  B:R         Aruba-Controller  119            31switch1

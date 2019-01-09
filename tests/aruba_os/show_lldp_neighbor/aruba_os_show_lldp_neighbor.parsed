@@ -1,0 +1,14 @@
+---
+parsed_sample:
+
+- local_interface: 'GE1/0'
+  chassis_id: 'ec:3e:f7:67:6a:40'
+  capabilities: 'B:R'
+  remote_interface: 'Aruba-Controller'
+  system_name: '31switch1'
+- local_interface: 'GE1/1'
+  chassis_id: 'ec:3e:f7:67:6a:40'
+  capabilities: 'B:R'
+  remote_interface: 'Aruba-Controller'
+  system_name: '31switch1'
+
