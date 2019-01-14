@@ -36,7 +36,6 @@ Start
   ^\s+Copyright
   ^\s*$$
   ^=+\s*$$ -> Hardware
-  ^. -> Error
 
 Hardware
   ^UNIT\s+\d+:\s+SL\s+${SLOT}:\s+${MODEL}\s+(?:${POE}\s+|)${PORTS}(?:-|)port\s+${MODULE_TYPE}\s+Module\s*$$
@@ -52,4 +51,3 @@ Hardware
   ^\s*$$
   ^.+processor
   ^My\s+stack
-  ^. -> Error
