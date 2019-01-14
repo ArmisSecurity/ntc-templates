@@ -6,6 +6,7 @@ parsed_sample:
   neighbor: '0'
   chassis_id: random-switch.bla
   port: GigabitEthernet1/0/9
+  port_description: ''
   management_address: 192.168.1.6
   capabilities: BR
 - ap: '22:22:22:22:22:22'
@@ -13,5 +14,6 @@ parsed_sample:
   neighbor: '0'
   chassis_id: random-switch.foo
   port: GigabitEthernet1/0/21
+  port_description: ''
   management_address: 192.168.1.4
   capabilities: B

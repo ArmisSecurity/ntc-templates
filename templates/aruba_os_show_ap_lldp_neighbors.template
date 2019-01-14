@@ -3,12 +3,21 @@ Value INTERFACE (\S+)
 Value NEIGHBOR (\d+)
 Value CHASSIS_ID (\S+)
 Value PORT (\S+)
+Value PORT_DESCRIPTION (\S+)
 Value MANAGEMENT_ADDRESS (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
 Value CAPABILITIES (\S+)
 
 Start
-  ^--  -> LLDP
+  ^\s*(-+\s+){7}-+\s* -> LLDP2
+  ^\s*(-+\s+){6}-+\s* -> LLDP1
+  ^.*
 
-LLDP
-  ^${AP}\s+${INTERFACE}\s+${NEIGHBOR}\s+${CHASSIS_ID}\s+${PORT}\s+${MANAGEMENT_ADDRESS}\s+${CAPABILITIES} -> Record
-  ^Capability
+LLDP1
+  ^\s*${AP}\s+${INTERFACE}\s+${NEIGHBOR}\s+${CHASSIS_ID}\s+${PORT}\s+Not\sreceived\s+${CAPABILITIES} -> Record
+  ^\s*${AP}\s+${INTERFACE}\s+${NEIGHBOR}\s+${CHASSIS_ID}\s+${PORT}\s+${MANAGEMENT_ADDRESS}\s+${CAPABILITIES} -> Record
+  ^\s*Capability -> Start
+
+LLDP2
+  ^\s*${AP}\s+${INTERFACE}\s+${NEIGHBOR}\s+${CHASSIS_ID}\s+${PORT}\s+${PORT_DESCRIPTION}\s+Not\sreceived\s+${CAPABILITIES} -> Record
+  ^\s*${AP}\s+${INTERFACE}\s+${NEIGHBOR}\s+${CHASSIS_ID}\s+${PORT}\s+${PORT_DESCRIPTION}\s+${MANAGEMENT_ADDRESS}\s+${CAPABILITIES} -> Record
+  ^\s*Capability -> Start

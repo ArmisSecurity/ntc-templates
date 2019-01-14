@@ -1,0 +1,32 @@
+AP LLDP Neighbors (Updated every 60 seconds)
+--------------------------------------------
+AP                 Interface  Neighbor  Chassis Name/ID                Port ID   Port Desc              Mgmt. Address   Capabilities
+--                 ---------  --------  ---------------                -------   ---------              -------------   ------------
+00:22:22:22:22:11  eth1       0         BLABLABLABLAS-DDD000           197       3/5                    Not received    B
+00:22:22:22:22:22  eth0       0         BLABLABLABLAS-DDD001           196       3/4                    Not received    B
+00:22:22:22:22:33  eth0       0         BLABLABLABLAS-DDD002.ggg.com   Gi1/0/33  WAP                    10.0.0.1        B
+00:22:22:22:22:44  bond0      0         BLABLABLABLAS-DDD003           42        1/42                   10.9.2.1        BR
+00:22:22:22:22:55  eth0       0         BLABLABLABLAS-DDD004.ggg.com   Gi2/0/1   GigabitEthernet2/0/1   10.111.11.13    B
+
+Capability codes: (R)Router, (B)Bridge, (A)Access Point, (P)Phone, (O)Other
+
+
+AP LLDP Neighbors (Updated every 60 seconds)
+--------------------------------------------
+AP                 Interface  Neighbor  Chassis Name/ID               Port ID   Port Desc  Mgmt. Address  Capabilities
+--                 ---------  --------  ---------------               -------   ---------  -------------  ------------
+00:22:22:22:22:66  eth0       0         BLABLABLABLAS-DDD002.ggg.com  port-014  WiFi       10.206.96.47   B
+00:22:22:22:22:77  eth0       0         dasfdsfsdfdsfdsfd             139       2/43       Not received   B
+
+Capability codes: (R)Router, (B)Bridge, (A)Access Point, (P)Phone, (O)Other
+
+
+AP LLDP Neighbors (Updated every 60 seconds)
+--------------------------------------------
+AP                 Interface  Neighbor  Chassis Name/ID     Port Name/ID           Mgmt. Address  Capabilities
+--                 ---------  --------  ---------------     ------------           -------------  ------------
+11:11:11:11:11:11  eth0       0         random-switch.bla  GigabitEthernet1/0/9   192.168.1.6    BR
+22:22:22:22:22:22  eth0       0         random-switch.foo  GigabitEthernet1/0/21  192.168.1.4    B
+
+Capability codes: (R)Router, (B)Bridge, (A)Access Point, (P)Phone, (O)Other
+

@@ -5,7 +5,8 @@ Value REMOTE_INTERFACE (\S+)
 Value SYSTEM_NAME (\S+)
 
 Start
-  ^-+\s+-+  -> LLDP
+  ^\s*-+\s+-+  -> LLDP
+  ^\s*
 
 LLDP
-  ^${LOCAL_INTERFACE}\s+${CHASSIS_ID}\s+${CAPABILITIES}\s+${REMOTE_INTERFACE}\s+\d+\s+${SYSTEM_NAME} -> Record
+  ^\s*${LOCAL_INTERFACE}\s+${CHASSIS_ID}\s+${CAPABILITIES}\s+${REMOTE_INTERFACE}\s+\d+\s+${SYSTEM_NAME} -> Record
