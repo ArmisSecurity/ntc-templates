@@ -1,0 +1,39 @@
+Value HOST_NAME (\S+)
+Value SYSTEM_CONTACT (.*?)
+Value SYSTEM_LOCATION (.*?)
+Value MAC_AGE_TIME_SECONDS (\d+)
+Value TIME_ZONE (\S+)
+Value DAYLIGHT_TIME_RULE (\S+)
+Value SOFTWARE_REVISION (\S+)
+Value BASE_MAC_ADDR (\S+)
+Value ROM_VERSION (\S+)
+Value SERIAL_NUMBER (\S+)
+Value UP_TIME (\d+\s+\w+)
+Value TOTAL_MEMORY (\S+)
+Value CPU_UNTIL_PERCTENTAGE (\d+)
+Value FREE_MEMORY (\S+)
+Value PACKETS_RX (\S+)
+Value PACKETS_TX (\S+)
+Value BUFFERS_TOTAL (\S+)
+Value BUFFERS_FREE (\S+)
+Value BUFFERS_LOWEST (\S+)
+Value BUFFERS_MISSED (\S+)
+
+
+Start
+  ^\s*System Name\s*:\s*${HOST_NAME}\s*$$
+  ^\s*System Contact\s*:\s*${SYSTEM_CONTACT}\s*$$
+  ^\s*System Location\s*:\s*${SYSTEM_LOCATION}\s*$$
+  ^\s*MAC Age Time \(sec\)\s*:\s*${MAC_AGE_TIME_SECONDS}\s*$$
+  ^\s*Time Zone\s*:\s*${TIME_ZONE}\s*$$
+  ^\s*Daylight Time Rule\s*:\s*${DAYLIGHT_TIME_RULE}\s*$$
+  ^\s*Software revision\s*:\s*${SOFTWARE_REVISION}\s*(Base MAC Addr\s*:\s*${BASE_MAC_ADDR}\s*)*$$
+  ^\s*Base MAC Addr\s*:\s*${BASE_MAC_ADDR}\s*$$
+  ^\s*ROM Version\s*:\s*${ROM_VERSION}\s*(Serial Number\s*:\s*${SERIAL_NUMBER}\s*)*$$
+  ^\s*.+Serial Number\s*:\s*${SERIAL_NUMBER}\s*$$
+  ^\s*Up Time\s*:\s*${UP_TIME}\s*(Memory\s*\-\s*Total\s*:\s*${TOTAL_MEMORY}\s*)*$$
+  ^\s*CPU Util\s*\(\%\)\s*:\s*${CPU_UNTIL_PERCTENTAGE}\s*(Free\s*:\s*${FREE_MEMORY}\s*)*$$
+  ^\s*IP\s*Mgmt\s*\-\s*Pkts\s*Rx\s*:\s*${PACKETS_RX}\s*Packet\s*\-\s*Total\s*\:\s*${BUFFERS_TOTAL}\s*$$
+  ^\s*Pkts\s*Tx\s*:\s*${PACKETS_TX}\s*Buffers\s*Free\s*\:\s*${BUFFERS_FREE}\s*$$
+  ^\s*Lowest\s*:\s*${BUFFERS_LOWEST}\s*$$
+  ^\s*Missed\s*:\s*${BUFFERS_MISSED}\s*$$

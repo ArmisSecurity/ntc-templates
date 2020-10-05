@@ -1,0 +1,13 @@
+Value MAC (\S+)
+Value VLAN (\S+)
+Value DESTINATION_PORT (\S+)
+Value AGE_DAYS (\S+)
+Value AGE_HOURS (\S+)
+Value AGE_MINUTES (\S+)
+Value AGE_SECONDS (\S+\.\S+)
+
+Start
+  ^\s*MAC\s+Address\s+Port\s+VLAN\s+Age\s+\(d:h:m:s.ms\)\s* -> MacRow
+
+MacRow
+  ^\s*${MAC}\s+${DESTINATION_PORT}\s+${VLAN}\s+${AGE_DAYS}:${AGE_HOURS}:${AGE_MINUTES}:${AGE_SECONDS}\s* -> Record
