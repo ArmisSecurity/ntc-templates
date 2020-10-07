@@ -1,0 +1,35 @@
+---
+parsed_sample:
+
+- vlan_id: '104'
+  bridge_address: '84b8.02ea.7500'
+
+- vlan_id: '106'
+  bridge_address: '84b8.02ea.7500'
+
+- vlan_id: '110'
+  bridge_address: '84b8.02ea.7500'
+
+- vlan_id: '112'
+  bridge_address: '84b8.02ea.7500'
+
+- vlan_id: '120'
+  bridge_address: '84b8.02ea.7500'
+
+- vlan_id: '145'
+  bridge_address: '84b8.02ea.7500'
+
+- vlan_id: '180'
+  bridge_address: '84b8.02ea.7500'
+
+- vlan_id: '200'
+  bridge_address: '84b8.02ea.7500'
+
+- vlan_id: '208'
+  bridge_address: '84b8.02ea.7500'
+
+- vlan_id: '224'
+  bridge_address: '84b8.02ea.7500'
+
+- vlan_id: '240'
+  bridge_address: '84b8.02ea.7500'
