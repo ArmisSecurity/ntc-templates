@@ -1,0 +1,9 @@
+Value MAC (\w+\-\w+)
+Value VLAN (\S+)
+Value STATE (\S+)
+Value DESTINATION_PORT (\S+)
+Value AGING_TIME (\S+)
+
+Start
+  ^\s*MAC\s*ADDR\s+VLAN\s*ID\s+STATE\s+PORT\s*INDEX\s+AGING\s*TIME.+
+  ^\s*${MAC}\s+${VLAN}\s+${STATE}\s+${DESTINATION_PORT}\s+${AGING_TIME} -> Record  

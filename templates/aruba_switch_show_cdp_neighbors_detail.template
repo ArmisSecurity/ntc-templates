@@ -1,0 +1,19 @@
+Value Required LOCAL_PORT (\d+)
+Value DEVICE_ID (.*?)
+Value ADDRESS_TYPE (\w+)
+Value REMOTE_ADDRESS (\d+\.\d+\.\d+\.\d+|\w+\.\w+\.\w+)
+Value PLATFORM (.*?)
+Value Required REMOTE_PORT (.*?)
+Value SOFTWARE_VERSION (.*?)
+Value CAPABILITIES (.*?)
+
+Start
+  ^\s*Port\s*:\s*${LOCAL_PORT}\s*$$
+  ^\s*Device ID\s*:\s*${DEVICE_ID}\s*$$
+  ^\s*Address Type\s*:\s*${ADDRESS_TYPE}\s*$$
+  ^\s*Address\s*:\s*${REMOTE_ADDRESS}\s*$$
+  ^\s*Platform\s*:\s*${PLATFORM}\s*$$
+  ^\s*Capability\s*:\s*${CAPABILITIES}\s*$$
+  ^\s*Device Port\s*:\s*${REMOTE_PORT}\s*$$
+  ^\s*Version\s*:\s*${SOFTWARE_VERSION}\s*$$
+  ^\s*---.+ -> Record

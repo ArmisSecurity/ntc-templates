@@ -1,0 +1,29 @@
+Value Required LOCAL_PORT (.*?)
+Value CHASSIS_TYPE (.*?)
+Value CHASSIS_ID (.*?)
+Value REMOTE_PORT_TYPE (.*?)
+Value Required REMOTE_PORT (.*?)
+Value SYSTEM_NAME (.*?)
+Value SYSTEM_DESCRIPTION (.*?)
+Value PORT_DESCRIPTION (.*?)
+Value PVID (.*?)
+Value SUPPORTED_CAPABILITIES (.*?)
+Value ENABLED_CAPABILITIES (.*?)
+Value REMOTE_ADDRESS_TYPE (.*?)
+Value REMOTE_ADDRESS (.*?)
+
+Start
+  ^\s*Local\s*Port\s*:\s*${LOCAL_PORT}\s*$$
+  ^\s*ChassisType\s*:\s*${CHASSIS_TYPE}\s*$$
+  ^\s*ChassisId\s*:\s*${CHASSIS_ID}\s*$$
+  ^\s*PortType\s*:\s*${REMOTE_PORT_TYPE}\s*$$
+  ^\s*PortId\s*:\s*${REMOTE_PORT}\s*$$
+  ^\s*SysName\s*:\s*${SYSTEM_NAME}\s*$$
+  ^\s*System\s*Descr\s*:\s*${SYSTEM_DESCRIPTION}\s*$$
+  ^\s*PortDescr\s*:\s*${PORT_DESCRIPTION}\s*$$
+  ^\s*Pvid\s*:\s*${PVID}\s*$$
+  ^\s*System\s*Capabilities\s*Supported\s*:\s*${SUPPORTED_CAPABILITIES}\s*$$
+  ^\s*System\s*Capabilities\s*Enabled\s*:\s*${ENABLED_CAPABILITIES}\s*$$
+  ^\s*Type\s*:\s*${REMOTE_ADDRESS_TYPE}\s*$$
+  ^\s*Address\s*:\s*${REMOTE_ADDRESS}\s*$$
+  ^---.+ -> Record
