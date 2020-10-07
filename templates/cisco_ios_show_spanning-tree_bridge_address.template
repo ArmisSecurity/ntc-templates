@@ -1,0 +1,9 @@
+Value VLAN_ID (\d+)
+Value BRIDGE_ADDRESS ((\w+.\w+.\w+))
+
+Start
+  ^VLAN(0*)?${VLAN_ID}\s+${BRIDGE_ADDRESS} -> Record
+  ^. -> Error
+
+
+
